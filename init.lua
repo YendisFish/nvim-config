@@ -38,3 +38,6 @@ require("plugins.lazy")
 descnoremap("n", "<leader><leader>", "<C-^>", "Go to previous file")
 noremap("n", "<C-s>", "^")
 noremap("n", "<C-e>", "$")
+
+-- PLugins --
+descnoremap("n", "<leader>s", ":Telescope find_files<CR>", "Open file finder")

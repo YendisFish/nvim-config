@@ -55,6 +55,13 @@ require('lazy').setup({
         require('plugins.whichkey')
     end
   },
+  {
+    "stevearc/oil.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+        require("plugins.oil")
+    end
+  }
 })
 
 require('plugins.treesitter')
