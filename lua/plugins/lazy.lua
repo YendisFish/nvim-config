@@ -61,9 +61,16 @@ require('lazy').setup({
     config = function()
         require("plugins.oil")
     end
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl"
   }
 })
 
 require('plugins.treesitter')
 require('plugins.onedark')
 require('plugins.lspconfig')
+
+
+require("ibl").setup()
