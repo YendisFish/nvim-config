@@ -18,3 +18,8 @@ lspconfig.omnisharp.setup({
     capabilities = cmp_nvim_lsp.default_capabilities(),
     on_attach = on_attach,
 })
+
+lspconfig.zls.setup({
+    on_attach = on_attach,
+    capabilities = cmp_nvim_lsp.default_capabilities()
+})

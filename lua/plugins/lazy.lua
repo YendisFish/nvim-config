@@ -69,6 +69,10 @@ require('lazy').setup({
   {
     "vyfor/cord.nvim",
     build = "Cord update",
+  },
+  {
+    'numToStr/Comment.nvim',
+    opts = {}
   }
 })
 

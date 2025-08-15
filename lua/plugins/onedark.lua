@@ -5,8 +5,9 @@ require('onedark').setup{
         keywords = "italic",
     },
     highlights = {
-        ["@lsp.type.property.cs"] = { fg = "$red" },
-        ["@variable.member.c_sharp"] = { fg = "$red" }
+        ["@lsp.type.property"] = { fg = "$red" },
+        ["@variable.member"] = { fg = "$red" },
+        ["@lsp.type.builtin"] = { fg = "$purple" }
     }
 }
 
