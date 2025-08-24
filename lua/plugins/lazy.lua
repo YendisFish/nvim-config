@@ -73,6 +73,10 @@ require('lazy').setup({
   {
     'numToStr/Comment.nvim',
     opts = {}
+  },
+  {
+    'mason-org/mason.nvim',
+    opts = {}
   }
 })
 

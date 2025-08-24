@@ -38,5 +38,10 @@ require("plugins.lazy")
 descnoremap("n", "<leader><leader>", "<C-^>", "Go to previous file")
 noremap("n", "<leader>4", "^")
 
--- PLugins --
+-- Plugins --
 descnoremap("n", "<leader>s", ":Telescope find_files<CR>", "Open file finder")
+
+-- Misc --
+noremap("n", "<C-s>", function()
+    vim.diagnostic.open_float()
+end)
