@@ -54,10 +54,44 @@ local lsps = {
     { "ts_ls", {
         cmd = { "bunx", "typescript-language-server", "--stdio" },
         filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-        root_dir = vim.lsp.util.root_pattern("package.json", "tsconfig.json", ".git"),
-        root_markers = { "package.json", "tsconfig.json", ".git" },
+        root_markers = { "tsconfig.json", ".git" },
         on_attach = on_attach,
     }},
+    { "svelte", {
+        cmd = { "svelteserver", "--stdio" },
+        filetypes = { "svelte" },
+        root_markers = { "package.json", "tsconfig.json", ".git" },
+        settings = {
+            svelte = {
+                plugin = {
+                    css = { enable = true },
+                    html = { enable = true },
+                    typescript = { enable = true }
+                }
+            }
+        }, 
+        on_attach = on_attach,
+    }},
+    { "intelephense", {
+        settings = {
+            intelephense = {
+                files = {
+                    maxSize = 1000000,
+                }
+            }
+        },
+        on_attach = on_attach,
+    }},
+    { "cssls", {
+        capabilities = cmp_nvim_lsp.default_capabilities(),
+        on_attach = on_attach,
+    }},
+    { "tailwindcss", {
+        filetypes = { "html", "svelte", "typescript", "css", "scss" },
+        root_markers = { "tailwind.config.js", "package,json" },
+        capabilities = cmp_nvim_lsp.default_capabilities(),
+        on_attach = on_attach,
+    }}
 }
 
 
