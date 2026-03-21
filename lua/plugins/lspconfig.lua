@@ -88,9 +88,44 @@ local lsps = {
     }},
     { "tailwindcss", {
         filetypes = { "html", "svelte", "typescript", "css", "scss" },
-        root_markers = { "tailwind.config.js", "package,json" },
+        root_markers = { "tailwind.config.js", "package.json" },
         capabilities = cmp_nvim_lsp.default_capabilities(),
         on_attach = on_attach,
+    }},
+    { "fsautocomplete", {
+        cmd = { "fsautocomplete", "--background-service-enabled" },
+        root_markers = { "*.fsproj", "*.sln" },
+        capabilities = cmp_nvim_lsp.default_capabilities(),
+        on_attach = on_attach,
+    }},
+    { "omnisharp", {
+        cmd = { "omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) },
+        root_markers = { "*.csproj", "*.sln" },
+        capabilities = cmp_nvim_lsp.default_capabilities(),
+        on_attach = on_attach,
+    }},
+    { "gopls", {
+        capabilities = cmp_nvim_lsp.default_capabilities(),
+        on_attach = on_attach,
+    }},
+    { "clangd", {
+        cmd = { "clangd" },
+        filetypes = { "c", "cpp" },
+        capabilities = cmp_nvim_lsp.default_capabilities(),
+        on_attach = on_attach,
+    }},
+    { "serve-d", {
+        cmd = { "serve-d" },
+        filetypes = { "d" },
+        root_markers = { "dub.json", "dub.sdl" },
+        capabilities = cmp_nvim_lsp.default_capabilities(),
+        on_attach = on_attach,
+        settings = {
+            d = {
+                stdlibPath = "auto",
+                enableDub = true,
+            },
+        },
     }}
 }
 

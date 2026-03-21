@@ -28,8 +28,7 @@ vim.opt.smartindent = true
 
 -- SAVE KEYMAPS --
 vim.keymap.set("n", "<leader>ww", ":w<CR>")
-vim.keymap.set("n", "<leader>wa", ":wa<CR>")
-vim.keymap.set("n", "<leader>wq" , ":wqa<CR>")
+vim.keymap.set("n", "<leader>wa", ":wa<CR>") vim.keymap.set("n", "<leader>wq" , ":wqa<CR>")
 
 -- LOAD LAZY --
 require("plugins.lazy")
@@ -45,3 +44,6 @@ descnoremap("n", "<leader>s", ":Telescope find_files<CR>", "Open file finder")
 noremap("n", "<C-s>", function()
     vim.diagnostic.open_float()
 end)
+
+-- LOAD MACROS --
+require("macros")

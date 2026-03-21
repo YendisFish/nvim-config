@@ -6,8 +6,10 @@ require('onedark').setup{
     },
     highlights = {
         ["@lsp.type.property"] = { fg = "$red" },
+        ["@property"] = { fg = "$red" },
         ["@variable.member"] = { fg = "$red" },
-        ["@lsp.type.builtin"] = { fg = "$purple" }
+        ["@lsp.type.builtin"] = { fg = "$purple" },
+        -- ["@lsp.type.operator.cpp"] = {}
     }
 }
 
